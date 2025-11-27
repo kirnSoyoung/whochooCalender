@@ -53,3 +53,9 @@
 - Local Storage  
 - 확률 기반 로직  
 - 인터랙티브 UI 애니메이션
+
+---
+
+## 실행
+
+https://kirnsoyoung.github.io/whochooCalender/
