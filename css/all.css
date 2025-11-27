@@ -1,0 +1,211 @@
+/* ==================== 폰트 ==================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Jua&display=swap');
+
+body {
+    font-family: "Jua", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 14pt;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+::placeholder {
+    font-family: "Jua", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+button {
+    font-family: "Jua", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+/* ==================== 초기화 ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* ==================== 헤더 ==================== */
+header {
+    padding: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(225, 198, 231);
+}
+
+#logo {
+    height: auto;
+    max-height: 40px;
+    object-fit: contain;
+}
+
+/* 후추 캘린더 글씨 */
+header h1 {
+    font-size: 1.5rem;
+}
+
+/* 이동 메뉴 */
+nav {
+    z-index: 999;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 2vw;
+}
+
+.nav a {
+    font-size: 1rem;
+}
+
+/* 햄버거 바 기본: 안보이게 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+  
+.menu-toggle .bar {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+}
+
+nav.show {
+    display: flex;
+}
+
+/* ==================== 메인 ==================== */
+main {
+    margin-top: 2rem;
+}
+
+
+/* ==================== footer ==================== */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-content p {
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== 반응형 웹: 스마트폰 ==================== */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 4vw;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        padding: 10px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+
+    .footer-content {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    .footer-content p:nth-child(2) {
+        display: none;
+    }
+}
+
+/* ==================== 반응형 웹: 태블릿 ==================== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 15pt;
+    }
+
+    header h1 {
+        flex-grow: 1;
+        margin-left: 20px;
+        font-size: 1.5rem;
+    }
+}
+
+/* 데스크톱 화면에 대한 스타일 */
+@media screen and (min-width: 1024px) {
+    header h1 {
+        flex-grow: 1;
+        margin-left: 20px;
+        font-size: 1.5rem;
+    }
+}

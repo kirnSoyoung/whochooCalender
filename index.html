@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후추 캘린더</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="images/logo.png"></a>
+        <h1>후추 캘린더</h1>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">일정</a></li>
+                <li><a href="collection.html">후추 도감</a></li>
+                <li><a href="gacha.html">후추 뽑기</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="image-section">
+            <img id="image" src="images/Cdefault.jpg" alt="후추 사진">
+        </section>
+
+        <section id="todo-section">
+            <div class="todo-input-box">
+                <input type="text" id="todo-input" placeholder="오늘의 할 일을 입력하세요">
+                <button onclick="addTodo()">추가</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </section>
+        
+        <section id="calendar-section">
+            <hr>
+            <div class="calendar-header">
+              <button id="left-btn" onclick="changeMonth(-1)">&lt;</button>
+              <h3 id="current-month"></h3>
+              <button id="right-btn" onclick="changeMonth(1)">&gt;</button>
+            </div>
+            <div class="weekdays">
+                <span class="weekend">일</span>
+                <span>월</span>
+                <span>화</span>
+                <span>수</span>
+                <span>목</span>
+                <span>금</span>
+                <span>토</span>
+            </div>
+    
+            <div id="calendar"></div>
+        </section>
+
+        <section id="calendar-input-section">
+            <div class="todo-input-box">
+                <input type="text" id="calendar-input" placeholder="선택한 일자의 할 일을 입력하세요">
+                <button onclick="addCalendarTask()">추가</button>
+            </div>
+            <ul id="calendar-task-list"></ul>
+            <ul id="calendar-completed-task-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Kim, Soyoung. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:ksoyoung1@naver.com">ksoyoung1@naver.com</a></p>
+            <p>Follow us: 
+                <a href="https://www.instagram.com/whochoo_o/profilecard/?igsh=MW11aWxrZWRmOGJ2cg==">Instagram</a>
+            </p>
+       </div>
+    </footer>
+
+    <script src="js/all.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+
